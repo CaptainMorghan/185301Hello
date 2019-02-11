@@ -1,4 +1,4 @@
-﻿//Morghan kiverago 2/8/2019 hello world
+﻿///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Morghan 185301IPO Area calculator
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Hello_World
+
+namespace _185301IPO
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -24,12 +25,18 @@ namespace Hello_World
         public MainWindow()
         {
             InitializeComponent();
-            MessageBox.Show("The Robot should be named Chris Hatchfeild");
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnCalculate_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Go commit die" + txtInput.Text);
+            double Length;
+            double Width;
+            double area;
+            double.TryParse(txtLength.Text, out Length);
+            double.TryParse(txtWidth.Text, out Width);
+            //Attempted to add a random element cause I was bored I think I need to import somthing in order to make it work otherwise the code works
+            area = Length * Width;
+            lblOutput.Content = "The area is: " + area.ToString("#0.0");
         }
     }
 }
